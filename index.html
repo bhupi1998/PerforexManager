@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <title>Perforex Manager</title>
 </head>
 <body>
-    <form action="">
+    <div>
         <fieldset>
             <legend>Taps</legend>
             <section> <!--Inputs-->
                 <!-- SFM and diameter to be used for tap RPM calculation -->
                 <label for="sfmTap">Enter SFM:</label>
                 <input type="number" name="sfmTap" id="sfmTap" step="0.01" placeholder="surface feet per minute" >
-
                 <label for="diameterTap">Enter Tap Diameter</label>
                 <input type='number' id="diameterTap" name="diameterTap" step="0.01" placeholder="tap diameter mm">
-                
+    
                 <!-- Needs to go from TPI to gradient mm/rev -->
                 <label for="tapPitchMetric">Enter TPI</label>
                 <input type="number" name="tapPitchMetric" id="tapPitchMetric" placeholder="TPI in inch" step="0.01">
             </section>
+            <button id="calcTap">Calculate</button>
             <section><!--outputs-->
                 <p>RPM:
                     <span id="tapRPMOutput">2000</span>
@@ -42,6 +42,7 @@
                 <label for="drillIPR">Enter Feed IPR</label>
                 <input type="number" name="drillIPR" id="drillIPR" step="0.0001" placeholder="0.0005 inch per revolution">
             </section>
+            <button id="calcDrill">Calculate</button>
             <section><!--outputs-->
                 <p>Z Feed:
                     <span id="drillZFeed:">2000</span>
@@ -49,22 +50,21 @@
                 </p>
             </section>
         </fieldset>
-
         <fieldset>
             <!--converts inch/min to m/min-->
             <legend>Endmill</legend>
             <section><!--inputs-->
                 <label for="endMillFeed">Enter feed rate:</label>
                 <input type="number" name="endMillFeed" id="endMillFeed" step="0.1" placeholder="0.55 inch per min">
-
             </section>
+            <button id="calcEndMill">Calculate</button>
             <section><!--outputs-->
                 <p>Feed rate:
                     <span id="drillZFeed:">2.15</span>
                     <span>m/min</span>
                 </p>
             </section>
-        </fieldset>
-    </form>
+        </fieldset>   
+    </div>
 </body>
 </html>
