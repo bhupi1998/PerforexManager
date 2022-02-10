@@ -2,6 +2,7 @@ const tapCalc=document.querySelector('#calcTap');
 const drillCalc=document.querySelector('#calcDrill');
 const endMillCalc=document.querySelector('#calcEndMill');
 
+// todo: Add all the other elements and add math functions
 
 
 tapCalc.addEventListener("click", ()=>{
