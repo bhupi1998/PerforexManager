@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <img src="/images/headerIMG.png" alt="headerImg"height="100px" width="auto">
+        <a href="https://ebhorsman.com/" target="_blank"><img src="/images/headerIMG.png" alt="headerImg"height="100px" width="auto"></a>
         <a href="https://github.com/bhupi1998" target="_blank"><img src="/images/GitHub-Mark-120px-plus.png" alt="github link" width="auto" height="30px"></a>
     </header>
     <div id="formContainer">
@@ -19,14 +19,20 @@
                 <legend>Taps</legend>
                 <section> <!--Inputs-->
                     <!-- SFM and diameter to be used for tap RPM calculation -->
-                    <label for="sfmTap">Enter SFM:</label>
-                    <input type="number" name="sfmTap" id="sfmTap" step="0.01" placeholder="surface feet per minute" >
-                    <label for="diameterTap">Enter Tap Diameter</label>
-                    <input type='number' id="diameterTap" name="diameterTap" step="0.01" placeholder="tap diameter mm">
+                    <div>
+                        <label for="sfmTap">Enter SFM:</label>
+                        <input type="number" name="sfmTap" id="sfmTap" step="0.01" placeholder="surface feet per minute" >
+                    </div>
+                    <div>
+                        <label for="diameterTap">Enter Tap Diameter</label>
+                        <input type='number' id="diameterTap" name="diameterTap" step="0.01" placeholder="tap diameter mm">
+                    </div>
         
                     <!-- Needs to go from TPI to gradient mm/rev -->
-                    <label for="tapPitchMetric">Enter TPI</label>
-                    <input type="number" name="tapPitch" id="tapPitch" placeholder="TPI in inch" step="0.01">
+                    <div>
+                        <label for="tapPitchMetric">Enter TPI</label>
+                        <input type="number" name="tapPitch" id="tapPitch" placeholder="TPI in inch" step="0.01">
+                    </div>
                 </section>
                 <button id="calcTap">Calculate</button>
                 <section><!--outputs-->
