@@ -1,6 +1,16 @@
+#formContainer{
+    width:100%;
+    height: auto;
+}
+
 #calculatorForm{
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%);
+    position:relative;
+    width:60%;
+    left:20%;
+}
+
+header{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
 }
