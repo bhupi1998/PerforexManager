@@ -24,6 +24,10 @@ const millZFeed=document.querySelector('#millZFeed');
 tapCalc.addEventListener("click", ()=>{
     let rpm=Math.round(((sfmTap.value*97.028)/diameterTap.value)*100)/100; //rounding
     let gradient=Math.round(((1/tapPitch.value)*25.4)*100)/100;
+    if(isNaN(rpm))
+        rpm=0;
+    if(gradient==Infinity)
+        gradient=0;
     tapRPMOutput.textContent=rpm;
     tapGradientOutput.textContent=gradient;
 })
