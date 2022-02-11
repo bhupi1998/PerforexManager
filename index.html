@@ -9,7 +9,7 @@
     <title>Perforex Manager</title>
 </head>
 <body>
-    <div>
+    <div id="calculatorForm">
         <fieldset>
             <legend>Taps</legend>
             <section> <!--Inputs-->
@@ -21,7 +21,7 @@
     
                 <!-- Needs to go from TPI to gradient mm/rev -->
                 <label for="tapPitchMetric">Enter TPI</label>
-                <input type="number" name="tapPitchMetric" id="tapPitchMetric" placeholder="TPI in inch" step="0.01">
+                <input type="number" name="tapPitch" id="tapPitch" placeholder="TPI in inch" step="0.01">
             </section>
             <button id="calcTap">Calculate</button>
             <section><!--outputs-->
@@ -45,7 +45,7 @@
             <button id="calcDrill">Calculate</button>
             <section><!--outputs-->
                 <p>Z Feed:
-                    <span id="drillZFeed:">2000</span>
+                    <span id="drillZFeed">2000</span>
                     <span>mm/Rev</span>
                 </p>
             </section>
@@ -60,7 +60,7 @@
             <button id="calcEndMill">Calculate</button>
             <section><!--outputs-->
                 <p>Feed rate:
-                    <span id="drillZFeed:">2.15</span>
+                    <span id="millZFeed">2.15</span>
                     <span>m/min</span>
                 </p>
             </section>
