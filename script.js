@@ -22,18 +22,18 @@ const endMillFeed=document.querySelector('#endMillFeed');
 const millZFeed=document.querySelector('#millZFeed');
 
 tapCalc.addEventListener("click", ()=>{
-    let rpm=(sfmTap.value*97.028)/diameterTap.value;
-    let gradient=(1/tapPitch.value)*25.4;
+    let rpm=Math.round(((sfmTap.value*97.028)/diameterTap.value)*100)/100; //rounding
+    let gradient=Math.round(((1/tapPitch.value)*25.4)*100)/100;
     tapRPMOutput.textContent=rpm;
     tapGradientOutput.textContent=gradient;
 })
 
 drillCalc.addEventListener("click", ()=>{
-    let drillFeed=drillIPR.value*25.40;
+    let drillFeed=Math.round((drillIPR.value*25.40)*100)/100;
     drillZfeed.textContent=drillFeed;
 })
 //inch per minute to m/min
 endMillCalc.addEventListener("click", ()=>{
-    let millFeed=endMillFeed.value/39.37;
+    let millFeed=Math.round((endMillFeed.value/39.37)*100)/100;
     millZFeed.textContent=millFeed;
 })
