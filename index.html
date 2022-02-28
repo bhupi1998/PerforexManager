@@ -19,23 +19,23 @@
                 <legend>Taps</legend>
                 <section> <!--Inputs-->
                     <!-- SFM and diameter to be used for tap RPM calculation -->
-                    <div>
+                    <div class="inputEntry">
                         <label for="sfmTap">Enter SFM:</label>
                         <input type="number" name="sfmTap" id="sfmTap" step="0.01" placeholder="surface feet per minute" >
                     </div>
-                    <div>
+                    <div class="inputEntry">
                         <label for="diameterTap">Enter Tap Diameter</label>
                         <input type='number' id="diameterTap" name="diameterTap" step="0.01" placeholder="tap diameter mm">
                     </div>
         
                     <!-- Needs to go from TPI to gradient mm/rev -->
-                    <div>
+                    <div class="inputEntry">
                         <label for="tapPitchMetric">Enter TPI</label>
                         <input type="number" name="tapPitch" id="tapPitch" placeholder="TPI in inch" step="0.01">
                     </div>
                 </section>
                 <button id="calcTap">Calculate</button>
-                <section><!--outputs-->
+                <section class="outputs"><!--outputs-->
                     <p>RPM:
                         <span id="tapRPMOutput"></span>
                         <span>rpm</span>
@@ -50,11 +50,13 @@
                 <legend>Drills</legend>
                 <!-- Need to convert inch per revolution (IPR) to mm/rev -->
                 <section><!--Inputs-->
-                    <label for="drillIPR">Enter Feed IPR</label>
-                    <input type="number" name="drillIPR" id="drillIPR" step="0.0001" placeholder="0.0005 inch per revolution">
+                    <div class="inputEntry">
+                        <label for="drillIPR">Enter Feed IPR</label>
+                        <input type="number" name="drillIPR" id="drillIPR" step="0.0001" placeholder="0.0005 inch per revolution">
+                    </div>
                 </section>
                 <button id="calcDrill">Calculate</button>
-                <section><!--outputs-->
+                <section class="outputs"><!--outputs-->
                     <p>Z Feed:
                         <span id="drillZFeed"></span>
                         <span>mm/Rev</span>
@@ -65,11 +67,13 @@
                 <!--converts inch/min to m/min-->
                 <legend>Endmill</legend>
                 <section><!--inputs-->
-                    <label for="endMillFeed">Enter feed rate:</label>
-                    <input type="number" name="endMillFeed" id="endMillFeed" step="0.1" placeholder="0.55 inch per min">
+                    <div class="inputEntry">
+                        <label for="endMillFeed">Enter feed rate:</label>
+                        <input type="number" name="endMillFeed" id="endMillFeed" step="0.1" placeholder="0.55 inch per min">
+                    </div>
                 </section>
                 <button id="calcEndMill">Calculate</button>
-                <section><!--outputs-->
+                <section class="outputs"><!--outputs-->
                     <p>Feed rate:
                         <span id="millZFeed"></span>
                         <span>m/min</span>
